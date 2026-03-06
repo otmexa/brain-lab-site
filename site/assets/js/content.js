@@ -81,8 +81,8 @@ const loadPageContent = async () => {
 
   setStatus(
     "loading",
-    "Loading site content...",
-    "Published entries are loaded from Supabase with the public runtime configuration.",
+    "Loading published updates...",
+    "This section is retrieving the latest public content from the site publishing system.",
   );
 
   try {
@@ -104,8 +104,8 @@ const loadPageContent = async () => {
       emptyNode.hidden = false;
       setStatus(
         "ready",
-        "Supabase is connected.",
-        "No published entries exist for this section yet.",
+        "No updates published yet.",
+        "This page is ready to surface content as soon as the first entries are published.",
       );
       return;
     }
@@ -114,15 +114,15 @@ const loadPageContent = async () => {
     emptyNode.hidden = true;
     setStatus(
       "ready",
-      "Supabase is connected.",
-      `Loaded ${data.length} published entr${data.length === 1 ? "y" : "ies"} from the database.`,
+      "Published updates are live.",
+      `Loaded ${data.length} published entr${data.length === 1 ? "y" : "ies"} for this section.`,
     );
   } catch (error) {
     console.error(error);
     setStatus(
       "error",
-      "Content could not be loaded.",
-      "Check the Netlify environment variables, the Supabase schema, and the RLS policies.",
+      "Updates are temporarily unavailable.",
+      "The public content feed could not be loaded right now.",
     );
   }
 };
