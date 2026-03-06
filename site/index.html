@@ -9,11 +9,10 @@
   <body data-page-slug="home">
     <div class="site-shell">
       <header class="site-header reveal">
-        <p class="eyebrow">Brain Lab</p>
-        <h1 class="site-title">Open neuroscience, shared tools, and reproducible work.</h1>
+        <p class="eyebrow">Open Neuroscience Project</p>
+        <h1 class="site-title">Brain Lab</h1>
         <p class="site-subtitle">
-          This site is structured for an open-source research project and prepared to publish content from Supabase
-          while staying deployable on Netlify.
+          A public home for publications, collaborators, computational tools, and reusable research resources.
         </p>
 
         <nav class="site-nav" aria-label="Main navigation">
@@ -21,7 +20,6 @@
             <li><a href="./publications/">Publications</a></li>
             <li><a href="./people/">People</a></li>
             <li><a href="./resources/">Resources</a></li>
-            <li><a href="./admin/">Admin</a></li>
           </ul>
         </nav>
       </header>
@@ -30,49 +28,79 @@
         <section class="hero reveal" data-delay="1">
           <div class="hero-grid">
             <div class="hero-copy">
-              <p class="eyebrow">Open project surface</p>
-              <h2>Infrastructure ready for a public research site, not just a landing page.</h2>
+              <p class="eyebrow">Main Page</p>
+              <h2>Open methods, shared outputs, and a clearer public face for the lab.</h2>
               <p>
-                The public site can publish entries directly from Supabase, while the admin panel controls text,
-                images, files, and publishing state through Auth and Storage-backed workflows.
+                Brain Lab is being built as a research site where publications, people, datasets, tools, and project
+                notes can live together in a structure that is easy to publish and easy to maintain.
               </p>
               <div class="action-row">
-                <a class="button" href="./admin/">Open admin</a>
+                <a class="button" href="./publications/">Explore publications</a>
                 <a class="button secondary" href="./resources/">Browse resources</a>
               </div>
+              <div class="meta-row">
+                <span class="pill">Open-source site</span>
+                <span class="pill">Research publishing</span>
+                <span class="pill">Reproducible workflows</span>
+              </div>
+            </div>
+
+            <aside class="hero-panel">
+              <p class="eyebrow">What visitors will find</p>
+              <ul class="signal-list">
+                <li>Publications, preprints, and updates tied to the lab's research output.</li>
+                <li>People pages for the team, collaborators, and contributors around the project.</li>
+                <li>Resources, files, and supporting material published without rebuilding the whole site.</li>
+              </ul>
               <p class="status" data-supabase-status data-state="idle">Supabase setup has not been checked yet.</p>
               <p class="muted" data-supabase-details>
                 Add <code>SUPABASE_URL</code>, <code>SUPABASE_PUBLISHABLE_KEY</code>, and
                 <code>SUPABASE_STORAGE_BUCKET</code> in Netlify before deploying.
               </p>
-            </div>
-
-            <aside class="hero-panel">
-              <div class="metrics-grid">
-                <div class="mini-stat">
-                  <strong>4</strong>
-                  <span>public sections ready</span>
-                </div>
-                <div class="mini-stat">
-                  <strong>1</strong>
-                  <span>admin surface online</span>
-                </div>
-                <div class="mini-stat">
-                  <strong>RLS</strong>
-                  <span>permissions enforced in Supabase</span>
-                </div>
-              </div>
-
-              <ul class="signal-list">
-                <li>Publish text blocks, links, files, and images without redeploying the site.</li>
-                <li>Keep production stable while iterating on the live `dev-full-site` branch deploy.</li>
-                <li>Meet Netlify open-source plan requirements with code of conduct and attribution footer.</li>
-              </ul>
             </aside>
           </div>
         </section>
 
-        <section class="stack reveal" data-delay="2" aria-labelledby="explore-title">
+        <section class="split-grid reveal" data-delay="2">
+          <article class="card content-card">
+            <p class="eyebrow">Why this site exists</p>
+            <h2 class="section-title">A research site that can grow with the project.</h2>
+            <p class="muted">
+              Instead of treating the website as a static brochure, the goal is to create a living surface for research
+              communication: papers, people, datasets, internal notes turned public, and reusable supporting material.
+            </p>
+            <div class="metrics-grid">
+              <div class="mini-stat">
+                <strong>Publications</strong>
+                <span>papers, preprints, updates</span>
+              </div>
+              <div class="mini-stat">
+                <strong>People</strong>
+                <span>team and collaborators</span>
+              </div>
+              <div class="mini-stat">
+                <strong>Resources</strong>
+                <span>files, docs, tools, datasets</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card content-card">
+            <p class="eyebrow">Publishing model</p>
+            <h2 class="section-title">Structured content, not manual edits for every update.</h2>
+            <p class="muted">
+              The public pages are prepared to load published records from Supabase. That means the owner can update
+              content, upload files, and expand sections without turning every small content change into a full code
+              task.
+            </p>
+            <div class="action-row">
+              <a class="button secondary" href="./people/">See the people section</a>
+              <a class="button secondary" href="./resources/">Open resources</a>
+            </div>
+          </article>
+        </section>
+
+        <section class="stack reveal" data-delay="3" aria-labelledby="explore-title">
           <div class="section-header">
             <div>
               <p class="eyebrow">Explore the site</p>
@@ -87,7 +115,7 @@
               </div>
               <div class="stack">
                 <h3 class="card-title">Publications</h3>
-                <p>Publish papers, preprints, abstracts, and supporting material from the same admin publishing flow.</p>
+                <p>Collect papers, preprints, abstracts, release notes, and research outputs in one readable place.</p>
               </div>
               <div class="action-row">
                 <a class="button secondary" href="./publications/">Open publications</a>
@@ -100,7 +128,7 @@
               </div>
               <div class="stack">
                 <h3 class="card-title">People</h3>
-                <p>Highlight the team, collaborators, and profile cards that shape the work behind the project.</p>
+                <p>Highlight the team, collaborators, and profile cards that give context to the work behind the lab.</p>
               </div>
               <div class="action-row">
                 <a class="button secondary" href="./people/">Open people</a>
@@ -113,7 +141,7 @@
               </div>
               <div class="stack">
                 <h3 class="card-title">Resources</h3>
-                <p>Share datasets, documentation, images, and downloadable files backed by Supabase Storage.</p>
+                <p>Share datasets, documentation, images, and downloadable files backed by a structured publishing flow.</p>
               </div>
               <div class="action-row">
                 <a class="button secondary" href="./resources/">Open resources</a>
@@ -122,55 +150,17 @@
           </div>
         </section>
 
-        <section class="split-grid reveal" data-delay="3">
-          <article class="card content-card">
-            <p class="eyebrow">Workflow</p>
-            <h2 class="section-title">How publishing works</h2>
-            <p class="muted">
-              The owner signs in through Supabase Auth, uploads media to Storage, and publishes content records to the
-              public site through the mini admin.
-            </p>
-            <div class="metrics-grid">
-              <div class="mini-stat">
-                <strong>Auth</strong>
-                <span>email + password owner access</span>
-              </div>
-              <div class="mini-stat">
-                <strong>DB</strong>
-                <span>content entries drive each page</span>
-              </div>
-              <div class="mini-stat">
-                <strong>Storage</strong>
-                <span>images and downloadable files</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="card content-card">
-            <p class="eyebrow">Current focus</p>
-            <h2 class="section-title">Design branch in progress</h2>
-            <p class="muted">
-              This branch deploy is the safe surface for building the real UI before anything moves back into
-              production.
-            </p>
-            <div class="action-row">
-              <a class="button" href="./admin/">Go to admin</a>
-              <a class="button secondary" href="./publications/">Open public sections</a>
-            </div>
-          </article>
-        </section>
-
         <section class="stack reveal" data-delay="3" aria-labelledby="home-content-title">
           <div class="section-header">
             <div>
-              <p class="eyebrow">Home content</p>
+              <p class="eyebrow">Latest from the site</p>
               <h2 class="section-title" id="home-content-title">Published entries</h2>
             </div>
           </div>
 
           <div class="content-grid" data-content-grid></div>
           <div class="notice" data-content-empty hidden>
-            <p>No published home entries exist yet. Use `/admin/` to create the first content block.</p>
+            <p>No published home entries exist yet. This section will surface updates, featured notes, or front-page highlights as soon as the owner publishes them.</p>
           </div>
         </section>
       </main>
