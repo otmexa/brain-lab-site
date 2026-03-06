@@ -8,7 +8,7 @@
   </head>
   <body data-page-slug="home">
     <div class="site-shell">
-      <header class="site-header">
+      <header class="site-header reveal">
         <p class="eyebrow">Brain Lab</p>
         <h1 class="site-title">Open neuroscience, shared tools, and reproducible work.</h1>
         <p class="site-subtitle">
@@ -27,20 +27,52 @@
       </header>
 
       <main class="site-main stack">
-        <section class="hero stack">
-          <h2>Infrastructure ready for Supabase and Netlify</h2>
-          <p>
-            Public sections load published records from the database, while the admin area handles Auth, content
-            editing, and file uploads through Storage with row-level security.
-          </p>
-          <p class="status" data-supabase-status data-state="idle">Supabase setup has not been checked yet.</p>
-          <p class="muted" data-supabase-details>
-            Add <code>SUPABASE_URL</code>, <code>SUPABASE_PUBLISHABLE_KEY</code>, and
-            <code>SUPABASE_STORAGE_BUCKET</code> in Netlify before deploying.
-          </p>
+        <section class="hero reveal" data-delay="1">
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <p class="eyebrow">Open project surface</p>
+              <h2>Infrastructure ready for a public research site, not just a landing page.</h2>
+              <p>
+                The public site can publish entries directly from Supabase, while the admin panel controls text,
+                images, files, and publishing state through Auth and Storage-backed workflows.
+              </p>
+              <div class="action-row">
+                <a class="button" href="./admin/">Open admin</a>
+                <a class="button secondary" href="./resources/">Browse resources</a>
+              </div>
+              <p class="status" data-supabase-status data-state="idle">Supabase setup has not been checked yet.</p>
+              <p class="muted" data-supabase-details>
+                Add <code>SUPABASE_URL</code>, <code>SUPABASE_PUBLISHABLE_KEY</code>, and
+                <code>SUPABASE_STORAGE_BUCKET</code> in Netlify before deploying.
+              </p>
+            </div>
+
+            <aside class="hero-panel">
+              <div class="metrics-grid">
+                <div class="mini-stat">
+                  <strong>4</strong>
+                  <span>public sections ready</span>
+                </div>
+                <div class="mini-stat">
+                  <strong>1</strong>
+                  <span>admin surface online</span>
+                </div>
+                <div class="mini-stat">
+                  <strong>RLS</strong>
+                  <span>permissions enforced in Supabase</span>
+                </div>
+              </div>
+
+              <ul class="signal-list">
+                <li>Publish text blocks, links, files, and images without redeploying the site.</li>
+                <li>Keep production stable while iterating on the live `dev-full-site` branch deploy.</li>
+                <li>Meet Netlify open-source plan requirements with code of conduct and attribution footer.</li>
+              </ul>
+            </aside>
+          </div>
         </section>
 
-        <section class="stack" aria-labelledby="explore-title">
+        <section class="stack reveal" data-delay="2" aria-labelledby="explore-title">
           <div class="section-header">
             <div>
               <p class="eyebrow">Explore the site</p>
@@ -55,7 +87,7 @@
               </div>
               <div class="stack">
                 <h3 class="card-title">Publications</h3>
-                <p>Publish papers, preprints, abstracts, and links to supporting material from the admin panel.</p>
+                <p>Publish papers, preprints, abstracts, and supporting material from the same admin publishing flow.</p>
               </div>
               <div class="action-row">
                 <a class="button secondary" href="./publications/">Open publications</a>
@@ -68,7 +100,7 @@
               </div>
               <div class="stack">
                 <h3 class="card-title">People</h3>
-                <p>Highlight the team, collaborators, and profiles that shape the work behind the project.</p>
+                <p>Highlight the team, collaborators, and profile cards that shape the work behind the project.</p>
               </div>
               <div class="action-row">
                 <a class="button secondary" href="./people/">Open people</a>
@@ -81,7 +113,7 @@
               </div>
               <div class="stack">
                 <h3 class="card-title">Resources</h3>
-                <p>Share datasets, documentation, images, and downloadable files through Supabase Storage.</p>
+                <p>Share datasets, documentation, images, and downloadable files backed by Supabase Storage.</p>
               </div>
               <div class="action-row">
                 <a class="button secondary" href="./resources/">Open resources</a>
@@ -90,7 +122,45 @@
           </div>
         </section>
 
-        <section class="stack" aria-labelledby="home-content-title">
+        <section class="split-grid reveal" data-delay="3">
+          <article class="card content-card">
+            <p class="eyebrow">Workflow</p>
+            <h2 class="section-title">How publishing works</h2>
+            <p class="muted">
+              The owner signs in through Supabase Auth, uploads media to Storage, and publishes content records to the
+              public site through the mini admin.
+            </p>
+            <div class="metrics-grid">
+              <div class="mini-stat">
+                <strong>Auth</strong>
+                <span>email + password owner access</span>
+              </div>
+              <div class="mini-stat">
+                <strong>DB</strong>
+                <span>content entries drive each page</span>
+              </div>
+              <div class="mini-stat">
+                <strong>Storage</strong>
+                <span>images and downloadable files</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card content-card">
+            <p class="eyebrow">Current focus</p>
+            <h2 class="section-title">Design branch in progress</h2>
+            <p class="muted">
+              This branch deploy is the safe surface for building the real UI before anything moves back into
+              production.
+            </p>
+            <div class="action-row">
+              <a class="button" href="./admin/">Go to admin</a>
+              <a class="button secondary" href="./publications/">Open public sections</a>
+            </div>
+          </article>
+        </section>
+
+        <section class="stack reveal" data-delay="3" aria-labelledby="home-content-title">
           <div class="section-header">
             <div>
               <p class="eyebrow">Home content</p>

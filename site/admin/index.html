@@ -8,7 +8,7 @@
   </head>
   <body data-page-slug="admin">
     <div class="site-shell">
-      <header class="site-header">
+      <header class="site-header reveal">
         <p class="eyebrow">Brain Lab Admin</p>
         <h1 class="site-title">Manage site content</h1>
         <p class="site-subtitle">
@@ -27,53 +27,86 @@
       </header>
 
       <main class="site-main admin-shell">
-        <section class="admin-panel stack">
-          <div class="section-header">
-            <div>
-              <p class="eyebrow">Auth</p>
-              <h2 class="admin-title">Owner access</h2>
+        <section class="hero reveal" data-delay="1">
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <p class="eyebrow">Publishing surface</p>
+              <h2>Owner access, section publishing, and asset uploads from one place.</h2>
+              <p>
+                Use this panel to sign in, create or edit records, upload media, and push content to the public
+                sections without redeploying the branch or production site.
+              </p>
+              <div class="action-row">
+                <button type="button" data-sign-out>Sign out</button>
+                <a class="button secondary" href="../index.html">Back to site</a>
+              </div>
             </div>
-            <button class="secondary" type="button" data-sign-out>Sign out</button>
+
+            <aside class="hero-panel">
+              <div class="surface-strip">
+                <strong>Auth status</strong>
+                <p class="status" data-auth-message data-state="loading">
+                  Loading Supabase client and checking the current session...
+                </p>
+                <p class="muted" data-auth-session>No active session.</p>
+              </div>
+
+              <div class="surface-strip">
+                <strong>Publishing model</strong>
+                <p class="muted">Draft or publish records for Home, Publications, People, and Resources.</p>
+              </div>
+            </aside>
           </div>
-
-          <p class="status" data-auth-message data-state="loading">
-            Loading Supabase client and checking the current session...
-          </p>
-          <p class="muted" data-auth-session>No active session.</p>
-
-          <form class="stack" data-auth-form>
-            <div class="field-grid">
-              <div class="field">
-                <label for="auth-mode">Action</label>
-                <select id="auth-mode" data-auth-mode>
-                  <option value="signin">Sign in</option>
-                  <option value="signup">Create account</option>
-                </select>
-              </div>
-
-              <div class="field">
-                <label for="auth-email">Email</label>
-                <input id="auth-email" data-auth-email type="email" placeholder="owner@example.com" required />
-              </div>
-
-              <div class="field">
-                <label for="auth-password">Password</label>
-                <input id="auth-password" data-auth-password type="password" placeholder="Use a strong password" required />
-              </div>
-            </div>
-
-            <div class="action-row">
-              <button type="submit">Continue</button>
-              <p class="muted">Only allowlisted accounts should receive admin role.</p>
-            </div>
-          </form>
         </section>
 
-        <div class="admin-columns">
+        <div class="admin-columns reveal" data-delay="2">
           <section class="admin-panel stack">
             <div class="section-header">
               <div>
-                <p class="eyebrow">Editor</p>
+                <p class="eyebrow">Access</p>
+                <h2 class="admin-title">Owner login</h2>
+              </div>
+            </div>
+
+            <p class="muted">Allowlisted accounts can create or access the admin from here.</p>
+
+            <form class="stack" data-auth-form>
+              <div class="field-grid">
+                <div class="field">
+                  <label for="auth-mode">Action</label>
+                  <select id="auth-mode" data-auth-mode>
+                    <option value="signin">Sign in</option>
+                    <option value="signup">Create account</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="auth-email">Email</label>
+                  <input id="auth-email" data-auth-email type="email" placeholder="owner@example.com" required />
+                </div>
+
+                <div class="field">
+                  <label for="auth-password">Password</label>
+                  <input id="auth-password" data-auth-password type="password" placeholder="Use a strong password" required />
+                </div>
+              </div>
+
+              <div class="action-row">
+                <button type="submit">Continue</button>
+                <p class="muted">Only allowlisted accounts should receive admin role.</p>
+              </div>
+            </form>
+
+            <div class="surface-strip">
+              <strong>Owner notes</strong>
+              <p class="muted">If email confirmation is enabled in Supabase Auth, confirm the email before signing in.</p>
+            </div>
+          </section>
+
+          <section class="admin-panel editor-stage">
+            <div class="admin-topbar">
+              <div>
+                <p class="eyebrow">Composer</p>
                 <h2 class="admin-title">Content and uploads</h2>
               </div>
               <button class="secondary" type="button" data-reset-editor>Reset form</button>
@@ -163,21 +196,25 @@
               </div>
             </form>
           </section>
+        </div>
 
-          <section class="admin-panel stack">
+        <section class="admin-panel stack reveal" data-delay="3">
+          <div class="admin-topbar">
             <div class="section-header">
               <div>
-                <p class="eyebrow">Database</p>
+                <p class="eyebrow">Library</p>
                 <h2 class="admin-title">Existing entries</h2>
               </div>
-              <button class="secondary" type="button" data-refresh-content>Refresh</button>
             </div>
+            <button class="secondary" type="button" data-refresh-content>Refresh</button>
+          </div>
 
-            <div class="admin-entry-list" data-content-list>
-              <p class="muted">Loading entries...</p>
-            </div>
-          </section>
-        </div>
+          <p class="muted">Review content records, reopen them for editing, or remove outdated entries.</p>
+
+          <div class="admin-entry-list" data-content-list>
+            <p class="muted">Loading entries...</p>
+          </div>
+        </section>
       </main>
 
       <footer class="footer">
