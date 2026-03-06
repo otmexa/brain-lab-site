@@ -8,40 +8,139 @@
   </head>
   <body data-page-slug="publications">
     <div class="site-shell">
-      <header class="site-header">
-        <p class="eyebrow">Brain Lab</p>
-        <h1 class="site-title">Publications</h1>
-        <p class="site-subtitle">
-          Papers, preprints, notes, and project updates can be managed through the mini admin and published here.
-        </p>
+      <header class="site-header site-header--home reveal" id="top">
+        <div class="topbar">
+          <a class="brand-lockup" href="../index.html" aria-label="Brain Lab home">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span class="brand-text">
+              <span class="eyebrow">Open Neuroscience Project</span>
+              <span class="brand-name">Brain Lab</span>
+            </span>
+          </a>
 
-        <nav class="site-nav" aria-label="Section navigation">
-          <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../people/">People</a></li>
-            <li><a href="../resources/">Resources</a></li>
-            <li><a href="../admin/">Admin</a></li>
-          </ul>
-        </nav>
+          <nav class="site-nav" aria-label="Section navigation">
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="#reading-tools">Reading tools</a></li>
+              <li><a href="./" aria-current="page">Publications</a></li>
+              <li><a href="../people/">People</a></li>
+              <li><a href="../resources/">Resources</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <section class="hero hero--publications reveal" data-delay="1">
+          <div class="hero-grid hero-grid--publications">
+            <div class="hero-copy">
+              <p class="eyebrow">Publications</p>
+              <h1 class="site-title">Readable research output, not a wall of links.</h1>
+              <p class="site-subtitle">
+                This page is built to make scientific papers easier to scan, easier to read, and easier to revisit.
+                Featured work gets context, the archive stays structured, and reading preferences stay under the
+                visitor&apos;s control.
+              </p>
+              <div class="meta-row">
+                <span class="pill">Featured papers</span>
+                <span class="pill">Readable abstracts</span>
+                <span class="pill">PDF and DOI exits</span>
+              </div>
+            </div>
+
+            <aside class="hero-panel publication-hero-panel">
+              <div class="surface-strip">
+                <strong>Reading experience</strong>
+                <p class="muted">Switch to dark mode for late reading, or use reading mode for a calmer paper-like surface.</p>
+              </div>
+
+              <div class="surface-strip">
+                <strong>What belongs here</strong>
+                <p class="muted">Papers, preprints, release notes, high-value summaries, and supporting figures.</p>
+              </div>
+            </aside>
+          </div>
+        </section>
       </header>
 
       <main class="site-main stack">
-        <section class="hero stack">
-          <h2>Research outputs</h2>
-          <p>Each entry can include text, links, PDFs, and images stored in Supabase Storage.</p>
-          <p class="status" data-supabase-status data-state="idle">Supabase setup has not been checked yet.</p>
-          <p class="muted" data-supabase-details>Waiting for runtime configuration.</p>
+        <section class="publication-tools reveal" data-delay="2" id="reading-tools">
+          <div class="publication-toolbar">
+            <div class="stack publication-toolbar-copy">
+              <p class="eyebrow">View options</p>
+              <h2 class="section-title">Choose the way you want to read.</h2>
+              <p class="muted">
+                Dark mode keeps contrast comfortable during long sessions. Reading mode simplifies the layout into a
+                more paper-like surface for dense text.
+              </p>
+            </div>
+
+            <div class="preference-bar" aria-label="Publication reading controls">
+              <div class="toggle-cluster" role="group" aria-label="Theme">
+                <span class="toggle-label">Theme</span>
+                <div class="toggle-group">
+                  <button class="toggle-button" type="button" data-theme-choice="light" aria-pressed="false">Light</button>
+                  <button class="toggle-button" type="button" data-theme-choice="dark" aria-pressed="false">Dark</button>
+                </div>
+              </div>
+
+              <div class="toggle-cluster" role="group" aria-label="Reading mode">
+                <span class="toggle-label">Mode</span>
+                <div class="toggle-group">
+                  <button class="toggle-button" type="button" data-reading-choice="default" aria-pressed="false">Standard</button>
+                  <button class="toggle-button" type="button" data-reading-choice="focused" aria-pressed="false">Reading</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <section class="stack" aria-labelledby="publications-content-title">
+        <section class="split-grid reveal" data-delay="2">
+          <article class="card content-card feature-card">
+            <p class="eyebrow">Editorial direction</p>
+            <h2 class="section-title">Scientific content deserves cleaner hierarchy.</h2>
+            <ul class="signal-list signal-list--compact">
+              <li>Featured publications should feel important without overwhelming the page.</li>
+              <li>Abstract-like summaries should be readable on both wide monitors and narrow screens.</li>
+              <li>Navigation to DOI, journal page, or PDF should be obvious and immediate.</li>
+            </ul>
+          </article>
+
+          <article class="card content-card feature-card">
+            <p class="eyebrow">Runtime</p>
+            <h2 class="section-title">Live publication feed</h2>
+            <div class="surface-strip surface-strip--status">
+              <strong>Publication status</strong>
+              <p class="status" data-supabase-status data-state="idle">Checking published updates...</p>
+              <p class="muted" data-supabase-details>Published publication records will appear here when available.</p>
+            </div>
+          </article>
+        </section>
+
+        <section class="publication-stage reveal" data-delay="3" data-featured-section>
           <div class="section-header">
             <div>
-              <p class="eyebrow">Database content</p>
-              <h2 class="section-title" id="publications-content-title">Published entries</h2>
+              <p class="eyebrow">Featured publication</p>
+              <h2 class="section-title">Lead paper</h2>
             </div>
           </div>
 
-          <div class="content-grid" data-content-grid></div>
+          <article class="featured-publication" data-featured-publication>
+            <div class="publication-empty-shell">
+              <p class="eyebrow">Awaiting publication</p>
+              <h3 class="card-title">The first featured paper will appear here.</h3>
+              <p class="muted">Once publications are added in the admin, the lead record will get this larger editorial treatment.</p>
+            </div>
+          </article>
+        </section>
+
+        <section class="stack reveal" data-delay="3" aria-labelledby="publication-archive-title">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">Archive</p>
+              <h2 class="section-title" id="publication-archive-title">Publication list</h2>
+            </div>
+          </div>
+
+          <div class="publication-list" data-publication-list></div>
           <div class="notice" data-content-empty hidden>
             <p>No publications have been published yet.</p>
           </div>
@@ -56,6 +155,7 @@
       </footer>
     </div>
 
+    <script type="module" src="../assets/js/ui-preferences.js"></script>
     <script type="module" src="../assets/js/content.js"></script>
   </body>
 </html>
