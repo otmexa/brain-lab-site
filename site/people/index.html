@@ -8,43 +8,73 @@
   </head>
   <body data-page-slug="people">
     <div class="site-shell">
-      <header class="site-header">
-        <p class="eyebrow">Brain Lab</p>
-        <h1 class="site-title">People</h1>
-        <p class="site-subtitle">
-          Contributor and collaborator profiles are stored as content entries, so they can be updated without
-          redeploying the site.
-        </p>
+      <header class="site-header site-header--home reveal">
+        <div class="topbar">
+          <a class="brand-lockup" href="../index.html" aria-label="Brain Lab home">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span class="brand-text">
+              <span class="eyebrow">Open Neuroscience Project</span>
+              <span class="brand-name">Brain Lab</span>
+            </span>
+          </a>
 
-        <nav class="site-nav" aria-label="Section navigation">
-          <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../publications/">Publications</a></li>
-            <li><a href="../resources/">Resources</a></li>
-            <li><a href="../admin/">Admin</a></li>
-          </ul>
-        </nav>
+          <nav class="site-nav" aria-label="Section navigation">
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../publications/">Publications</a></li>
+              <li><a href="./" aria-current="page">People</a></li>
+              <li><a href="../resources/">Resources</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <section class="hero reveal" data-delay="1">
+          <h1 class="site-title">People</h1>
+          <p class="site-subtitle">
+            Example layout for the team, collaborators, and contributors. This page should stay simple and profile-led.
+          </p>
+        </section>
       </header>
 
       <main class="site-main stack">
-        <section class="hero stack">
-          <h2>Team and collaborators</h2>
-          <p>Use entry type <code>profile</code> in the admin panel to keep this section organized.</p>
-          <p class="status" data-supabase-status data-state="idle">Supabase setup has not been checked yet.</p>
-          <p class="muted" data-supabase-details>Waiting for runtime configuration.</p>
-        </section>
-
-        <section class="stack" aria-labelledby="people-content-title">
+        <section class="stack reveal" data-delay="2" aria-labelledby="people-example-title">
           <div class="section-header">
             <div>
-              <p class="eyebrow">Database content</p>
-              <h2 class="section-title" id="people-content-title">Published entries</h2>
+              <p class="eyebrow">Example Profiles</p>
+              <h2 class="section-title" id="people-example-title">Simple profile cards</h2>
             </div>
           </div>
 
-          <div class="content-grid" data-content-grid></div>
-          <div class="notice" data-content-empty hidden>
-            <p>No people profiles have been published yet.</p>
+          <div class="content-grid">
+            <article class="card content-card">
+              <div class="meta-row">
+                <span class="pill">Principal Investigator</span>
+              </div>
+              <div class="stack">
+                <h3 class="card-title">Example Researcher One</h3>
+                <p>Focus: hippocampal circuits, memory dynamics, and neural population structure.</p>
+              </div>
+            </article>
+
+            <article class="card content-card">
+              <div class="meta-row">
+                <span class="pill">Postdoctoral Researcher</span>
+              </div>
+              <div class="stack">
+                <h3 class="card-title">Example Researcher Two</h3>
+                <p>Focus: behavior, systems neuroscience, and computational analysis of neural activity.</p>
+              </div>
+            </article>
+
+            <article class="card content-card">
+              <div class="meta-row">
+                <span class="pill">Collaborator</span>
+              </div>
+              <div class="stack">
+                <h3 class="card-title">Example Collaborator</h3>
+                <p>Focus: data analysis, imaging, and cross-lab collaboration on experimental design.</p>
+              </div>
+            </article>
           </div>
         </section>
       </main>
@@ -58,6 +88,5 @@
     </div>
 
     <script type="module" src="../assets/js/ui-preferences.js"></script>
-    <script type="module" src="../assets/js/content.js"></script>
   </body>
 </html>

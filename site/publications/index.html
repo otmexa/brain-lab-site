@@ -21,7 +21,6 @@
           <nav class="site-nav" aria-label="Section navigation">
             <ul>
               <li><a href="../index.html">Home</a></li>
-              <li><a href="#reading-tools">Reading tools</a></li>
               <li><a href="./" aria-current="page">Publications</a></li>
               <li><a href="../people/">People</a></li>
               <li><a href="../resources/">Resources</a></li>
@@ -33,28 +32,16 @@
           <div class="hero-grid hero-grid--publications">
             <div class="hero-copy">
               <p class="eyebrow">Publications</p>
-              <h1 class="site-title">Readable research output, not a wall of links.</h1>
+              <h1 class="site-title">Clean reading for scientific papers.</h1>
               <p class="site-subtitle">
-                This page is built to make scientific papers easier to scan, easier to read, and easier to revisit.
-                Featured work gets context, the archive stays structured, and reading preferences stay under the
-                visitor&apos;s control.
+                This page should prioritize legibility: clear titles, concise summaries, and direct access to DOI or PDF.
               </p>
-              <div class="meta-row">
-                <span class="pill">Featured papers</span>
-                <span class="pill">Readable abstracts</span>
-                <span class="pill">PDF and DOI exits</span>
-              </div>
             </div>
 
             <aside class="hero-panel publication-hero-panel">
               <div class="surface-strip">
-                <strong>Reading experience</strong>
-                <p class="muted">Switch to dark mode for late reading, or use reading mode for a calmer paper-like surface.</p>
-              </div>
-
-              <div class="surface-strip">
-                <strong>What belongs here</strong>
-                <p class="muted">Papers, preprints, release notes, high-value summaries, and supporting figures.</p>
+                <strong>Reading options</strong>
+                <p class="muted">Dark mode and reading mode live here only, where long-form scientific reading actually benefits from them.</p>
               </div>
             </aside>
           </div>
@@ -62,15 +49,12 @@
       </header>
 
       <main class="site-main stack">
-        <section class="publication-tools reveal" data-delay="2" id="reading-tools">
+        <section class="publication-tools reveal" data-delay="2">
           <div class="publication-toolbar">
             <div class="stack publication-toolbar-copy">
               <p class="eyebrow">View options</p>
-              <h2 class="section-title">Choose the way you want to read.</h2>
-              <p class="muted">
-                Dark mode keeps contrast comfortable during long sessions. Reading mode simplifies the layout into a
-                more paper-like surface for dense text.
-              </p>
+              <h2 class="section-title">Choose how you want to read.</h2>
+              <p class="muted">Standard view keeps the page balanced. Reading mode narrows the page and calms the layout for long abstracts.</p>
             </div>
 
             <div class="preference-bar" aria-label="Publication reading controls">
@@ -93,41 +77,31 @@
           </div>
         </section>
 
-        <section class="split-grid reveal" data-delay="2">
-          <article class="card content-card feature-card">
-            <p class="eyebrow">Editorial direction</p>
-            <h2 class="section-title">Scientific content deserves cleaner hierarchy.</h2>
-            <ul class="signal-list signal-list--compact">
-              <li>Featured publications should feel important without overwhelming the page.</li>
-              <li>Abstract-like summaries should be readable on both wide monitors and narrow screens.</li>
-              <li>Navigation to DOI, journal page, or PDF should be obvious and immediate.</li>
-            </ul>
-          </article>
-
-          <article class="card content-card feature-card">
-            <p class="eyebrow">Runtime</p>
-            <h2 class="section-title">Live publication feed</h2>
-            <div class="surface-strip surface-strip--status">
-              <strong>Publication status</strong>
-              <p class="status" data-supabase-status data-state="idle">Checking published updates...</p>
-              <p class="muted" data-supabase-details>Published publication records will appear here when available.</p>
-            </div>
-          </article>
-        </section>
-
-        <section class="publication-stage reveal" data-delay="3" data-featured-section>
+        <section class="publication-stage reveal" data-delay="2">
           <div class="section-header">
             <div>
-              <p class="eyebrow">Featured publication</p>
-              <h2 class="section-title">Lead paper</h2>
+              <p class="eyebrow">Example Featured Paper</p>
+              <h2 class="section-title">Lead publication layout</h2>
             </div>
           </div>
 
-          <article class="featured-publication" data-featured-publication>
-            <div class="publication-empty-shell">
-              <p class="eyebrow">Awaiting publication</p>
-              <h3 class="card-title">The first featured paper will appear here.</h3>
-              <p class="muted">Once publications are added in the admin, the lead record will get this larger editorial treatment.</p>
+          <article class="featured-publication-card">
+            <div class="featured-publication-placeholder" aria-hidden="true"></div>
+            <div class="featured-publication-copy">
+              <div class="meta-row">
+                <span class="pill">Example paper</span>
+                <span class="pill">2026</span>
+              </div>
+              <h3 class="section-title">Example title on hippocampal population dynamics and rapid generalization.</h3>
+              <p class="publication-summary publication-summary--featured">
+                This is example text for the featured paper layout. The purpose is to show hierarchy: title first,
+                author and journal exits second, and a readable summary below without turning the page into a wall of
+                dense text.
+              </p>
+              <div class="action-row">
+                <a class="button secondary" href="#">Journal / DOI</a>
+                <a class="button" href="#">PDF</a>
+              </div>
             </div>
           </article>
         </section>
@@ -135,14 +109,49 @@
         <section class="stack reveal" data-delay="3" aria-labelledby="publication-archive-title">
           <div class="section-header">
             <div>
-              <p class="eyebrow">Archive</p>
+              <p class="eyebrow">Example Archive</p>
               <h2 class="section-title" id="publication-archive-title">Publication list</h2>
             </div>
           </div>
 
-          <div class="publication-list" data-publication-list></div>
-          <div class="notice" data-content-empty hidden>
-            <p>No publications have been published yet.</p>
+          <div class="publication-list">
+            <article class="publication-item">
+              <div class="publication-item-index" aria-hidden="true">01</div>
+              <div class="publication-item-copy">
+                <div class="meta-row">
+                  <span class="pill">Example paper</span>
+                  <span class="pill">Preprint</span>
+                </div>
+                <h3 class="card-title">Example publication title for memory replay and sleep microstructure.</h3>
+                <p class="publication-summary">
+                  Example summary text showing how shorter archive entries can remain readable and structured without
+                  needing oversized headlines or scattered links.
+                </p>
+                <div class="action-row">
+                  <a class="button secondary" href="#">Journal / DOI</a>
+                  <a class="button" href="#">PDF</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="publication-item">
+              <div class="publication-item-index" aria-hidden="true">02</div>
+              <div class="publication-item-copy">
+                <div class="meta-row">
+                  <span class="pill">Example paper</span>
+                  <span class="pill">Journal article</span>
+                </div>
+                <h3 class="card-title">Example publication title for circuit organization and behavioral flexibility.</h3>
+                <p class="publication-summary">
+                  Another example entry demonstrating a quieter archive structure, useful spacing, and direct exits for
+                  readers who mainly want the paper and the abstract summary.
+                </p>
+                <div class="action-row">
+                  <a class="button secondary" href="#">Journal / DOI</a>
+                  <a class="button" href="#">PDF</a>
+                </div>
+              </div>
+            </article>
           </div>
         </section>
       </main>
@@ -156,6 +165,5 @@
     </div>
 
     <script type="module" src="../assets/js/ui-preferences.js"></script>
-    <script type="module" src="../assets/js/content.js"></script>
   </body>
 </html>

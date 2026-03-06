@@ -20,8 +20,7 @@
 
           <nav class="site-nav" aria-label="Main navigation">
             <ul>
-              <li><a href="#top">Home</a></li>
-              <li><a href="#focus">Research Focus</a></li>
+              <li><a href="./index.html" aria-current="page">Home</a></li>
               <li><a href="./publications/">Publications</a></li>
               <li><a href="./people/">People</a></li>
               <li><a href="./resources/">Resources</a></li>
@@ -32,30 +31,15 @@
         <section class="hero hero--home reveal" data-delay="1">
           <div class="hero-grid hero-grid--home">
             <div class="hero-copy">
-              <p class="eyebrow">Neuroscience, computation, and public communication</p>
-              <h1 class="site-title">A clearer public face for publications, people, and research tools.</h1>
+              <p class="eyebrow">Main Page</p>
+              <h1 class="site-title">Neuroscience research, people, and open materials in one clear structure.</h1>
               <p class="site-subtitle">
-                Brain Lab is structured as an open research site where scientific output, collaborators, methods, and
-                reusable resources can be published with clarity instead of getting lost inside a noisy interface.
+                This site is being organized as a readable public face for the lab: publications, collaborators, and
+                research resources without visual noise or confusing navigation.
               </p>
               <div class="action-row">
-                <a class="button" href="./publications/">Read publications</a>
-                <a class="button secondary" href="./people/">Meet the team</a>
-              </div>
-
-              <div class="hero-stat-band">
-                <article class="hero-stat">
-                  <strong>Publications</strong>
-                  <span>Papers, preprints, and research updates.</span>
-                </article>
-                <article class="hero-stat">
-                  <strong>People</strong>
-                  <span>Contributors, collaborators, and lab profiles.</span>
-                </article>
-                <article class="hero-stat">
-                  <strong>Resources</strong>
-                  <span>Files, data-adjacent materials, and open tools.</span>
-                </article>
+                <a class="button" href="./publications/">View publications</a>
+                <a class="button secondary" href="./people/">View people</a>
               </div>
             </div>
 
@@ -69,9 +53,9 @@
                 <span class="neuro-link link-a"></span>
                 <span class="neuro-link link-b"></span>
                 <span class="neuro-link link-c"></span>
-                <span class="neuro-label label-a">signal</span>
-                <span class="neuro-label label-b">network</span>
-                <span class="neuro-label label-c">systems</span>
+                <span class="neuro-label label-a">memory</span>
+                <span class="neuro-label label-b">circuits</span>
+                <span class="neuro-label label-c">behavior</span>
               </div>
             </aside>
           </div>
@@ -79,109 +63,66 @@
       </header>
 
       <main class="site-main stack">
-        <section class="split-grid reveal" data-delay="2" id="focus">
+        <section class="stack reveal" data-delay="2" aria-labelledby="home-example-title">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">Example Structure</p>
+              <h2 class="section-title" id="home-example-title">What each section should do</h2>
+            </div>
+          </div>
+
+          <div class="content-grid">
+            <article class="card content-card">
+              <div class="meta-row">
+                <span class="pill">Publications</span>
+              </div>
+              <div class="stack">
+                <h3 class="card-title">Readable papers</h3>
+                <p>Featured papers first, then a clean archive with clear exits to DOI, journal page, or PDF.</p>
+              </div>
+            </article>
+
+            <article class="card content-card">
+              <div class="meta-row">
+                <span class="pill">People</span>
+              </div>
+              <div class="stack">
+                <h3 class="card-title">Clear profiles</h3>
+                <p>Simple researcher cards with role, area of work, and enough context to know who is involved.</p>
+              </div>
+            </article>
+
+            <article class="card content-card">
+              <div class="meta-row">
+                <span class="pill">Resources</span>
+              </div>
+              <div class="stack">
+                <h3 class="card-title">Useful materials</h3>
+                <p>Files, links, datasets, and supporting documents presented in a structure that is easy to scan.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="split-grid reveal" data-delay="3">
           <article class="card content-card feature-card">
-            <p class="eyebrow">Research Focus</p>
-            <h2 class="section-title">Scientific tone, clearer menus, and room for serious content.</h2>
-            <p class="muted">
-              The goal is not to imitate overloaded lab sites. The goal is to communicate neuroscience work with a
-              stronger visual identity and much better readability.
-            </p>
+            <p class="eyebrow">Example Goal</p>
+            <h2 class="section-title">A site that is calm to read.</h2>
             <ul class="signal-list signal-list--compact">
-              <li>Navigation should be immediate, not buried in visual clutter.</li>
-              <li>The front page should feel scientific without turning into a color explosion.</li>
-              <li>Every public section should support readable summaries and supporting material.</li>
+              <li>Clear menu at the top on every page.</li>
+              <li>Less filler text and less decorative clutter.</li>
+              <li>Each page should show only the content type it is meant to hold.</li>
             </ul>
           </article>
 
           <article class="card content-card feature-card">
-            <p class="eyebrow">Site Map</p>
-            <h2 class="section-title">Three main doors into the project.</h2>
-            <div class="quick-map">
-              <a class="map-card" href="./publications/">
-                <strong>Publications</strong>
-                <span>Outputs, papers, updates, and formal research record.</span>
-              </a>
-              <a class="map-card" href="./people/">
-                <strong>People</strong>
-                <span>Principal investigators, contributors, and collaborators.</span>
-              </a>
-              <a class="map-card" href="./resources/">
-                <strong>Resources</strong>
-                <span>Supporting files, methods, images, links, and shared tools.</span>
-              </a>
-            </div>
+            <p class="eyebrow">Example Flow</p>
+            <h2 class="section-title">Home as orientation, not as a dump of everything.</h2>
+            <p class="muted">
+              The home page should explain what the lab publishes and guide visitors to the right section. It should
+              not try to contain every interface option or every type of content at once.
+            </p>
           </article>
-        </section>
-
-        <section class="stack reveal" data-delay="3" aria-labelledby="explore-title">
-          <div class="section-header">
-            <div>
-              <p class="eyebrow">Core Sections</p>
-              <h2 class="section-title" id="explore-title">Built for readable science communication.</h2>
-            </div>
-          </div>
-
-          <div class="content-grid research-grid">
-            <article class="card content-card">
-              <div class="meta-row">
-                <span class="pill">Research Output</span>
-              </div>
-              <div class="stack">
-                <h3 class="card-title">Publications</h3>
-                <p>Collect papers, preprints, release notes, and visible research output in one coherent section.</p>
-              </div>
-              <div class="action-row">
-                <a class="button secondary" href="./publications/">Open publications</a>
-              </div>
-            </article>
-
-            <article class="card content-card">
-              <div class="meta-row">
-                <span class="pill">Lab Network</span>
-              </div>
-              <div class="stack">
-                <h3 class="card-title">People</h3>
-                <p>Show the team, collaborators, and contributor network with much better hierarchy and structure.</p>
-              </div>
-              <div class="action-row">
-                <a class="button secondary" href="./people/">Open people</a>
-              </div>
-            </article>
-
-            <article class="card content-card">
-              <div class="meta-row">
-                <span class="pill">Open Materials</span>
-              </div>
-              <div class="stack">
-                <h3 class="card-title">Resources</h3>
-                <p>Publish supporting files, documentation, media, and reusable materials without muddy navigation.</p>
-              </div>
-              <div class="action-row">
-                <a class="button secondary" href="./resources/">Open resources</a>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="stack reveal" data-delay="3" aria-labelledby="home-content-title">
-          <div class="section-header">
-            <div>
-              <p class="eyebrow">Front-page Updates</p>
-              <h2 class="section-title" id="home-content-title">Published entries</h2>
-            </div>
-          </div>
-
-          <div class="surface-strip surface-strip--status">
-            <strong>Runtime status</strong>
-            <p class="status" data-supabase-status data-state="idle">Checking published updates...</p>
-            <p class="muted" data-supabase-details>Published entries from the site backend will appear here.</p>
-          </div>
-
-          <div class="content-grid" data-content-grid></div>
-          <div class="notice" data-content-empty hidden>
-            <p>No published home entries exist yet. This area will surface updates, front-page highlights, or featured notes as soon as they are published.</p>
-          </div>
         </section>
       </main>
 
@@ -194,6 +135,5 @@
     </div>
 
     <script type="module" src="./assets/js/ui-preferences.js"></script>
-    <script type="module" src="./assets/js/content.js"></script>
   </body>
 </html>
