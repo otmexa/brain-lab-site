@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brain Lab | People</title>
+    <link rel="stylesheet" href="../assets/css/site.css" />
+  </head>
+  <body data-page-slug="people">
+    <div class="site-shell">
+      <header class="site-header">
+        <p class="eyebrow">Brain Lab</p>
+        <h1 class="site-title">People</h1>
+        <p class="site-subtitle">
+          Contributor and collaborator profiles are stored as content entries, so they can be updated without
+          redeploying the site.
+        </p>
+
+        <nav class="site-nav" aria-label="Section navigation">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../publications/">Publications</a></li>
+            <li><a href="../resources/">Resources</a></li>
+            <li><a href="../admin/">Admin</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="site-main stack">
+        <section class="hero stack">
+          <h2>Team and collaborators</h2>
+          <p>Use entry type <code>profile</code> in the admin panel to keep this section organized.</p>
+          <p class="status" data-supabase-status data-state="idle">Supabase setup has not been checked yet.</p>
+          <p class="muted" data-supabase-details>Waiting for runtime configuration.</p>
+        </section>
+
+        <section class="stack" aria-labelledby="people-content-title">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">Database content</p>
+              <h2 class="section-title" id="people-content-title">Published entries</h2>
+            </div>
+          </div>
+
+          <div class="content-grid" data-content-grid></div>
+          <div class="notice" data-content-empty hidden>
+            <p>No people profiles have been published yet.</p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>
+          This site is powered by
+          <a href="https://netlify.com" rel="noopener noreferrer">Netlify</a>
+        </p>
+      </footer>
+    </div>
+
+    <script type="module" src="../assets/js/content.js"></script>
+  </body>
+</html>

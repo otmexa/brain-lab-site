@@ -4,33 +4,65 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Brain Lab</title>
+    <link rel="stylesheet" href="./assets/css/site.css" />
   </head>
-  <body>
-    <header>
-      <h1>Brain Lab</h1>
-      <p>Open-source website for neuroscience research, publications, and computational tools.</p>
-    </header>
+  <body data-page-slug="home">
+    <div class="site-shell">
+      <header class="site-header">
+        <p class="eyebrow">Brain Lab</p>
+        <h1 class="site-title">Open neuroscience, shared tools, and reproducible work.</h1>
+        <p class="site-subtitle">
+          This site is structured for an open-source research project and prepared to publish content from Supabase
+          while staying deployable on Netlify.
+        </p>
 
-    <nav aria-label="Main navigation">
-      <ul>
-        <li><a href="./publications/">Publications</a></li>
-        <li><a href="./people/">People</a></li>
-        <li><a href="./resources/">Resources</a></li>
-      </ul>
-    </nav>
+        <nav class="site-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="./publications/">Publications</a></li>
+            <li><a href="./people/">People</a></li>
+            <li><a href="./resources/">Resources</a></li>
+            <li><a href="./admin/">Admin</a></li>
+          </ul>
+        </nav>
+      </header>
 
-    <main>
-      <section>
-        <h2>Project Structure Ready</h2>
-        <p>This entry page is the starting point for the Brain Lab site.</p>
-      </section>
-    </main>
+      <main class="site-main stack">
+        <section class="hero stack">
+          <h2>Infrastructure ready for Supabase and Netlify</h2>
+          <p>
+            Public sections load published records from the database, while the admin area handles Auth, content
+            editing, and file uploads through Storage with row-level security.
+          </p>
+          <p class="status" data-supabase-status data-state="idle">Supabase setup has not been checked yet.</p>
+          <p class="muted" data-supabase-details>
+            Add <code>SUPABASE_URL</code>, <code>SUPABASE_PUBLISHABLE_KEY</code>, and
+            <code>SUPABASE_STORAGE_BUCKET</code> in Netlify before deploying.
+          </p>
+        </section>
 
-    <footer>
-      <p>
-        This site is powered by
-        <a href="https://netlify.com">Netlify</a>
-      </p>
-    </footer>
+        <section class="stack" aria-labelledby="home-content-title">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">Home content</p>
+              <h2 class="section-title" id="home-content-title">Published entries</h2>
+            </div>
+          </div>
+
+          <div class="content-grid" data-content-grid></div>
+          <div class="notice" data-content-empty hidden>
+            <p>No published home entries exist yet. Use `/admin/` to create the first content block.</p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>
+          This site is powered by
+          <a href="https://netlify.com" rel="noopener noreferrer">Netlify</a>
+        </p>
+      </footer>
+    </div>
+
+    <script type="module" src="./assets/js/content.js"></script>
   </body>
 </html>

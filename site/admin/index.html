@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brain Lab | Admin</title>
+    <link rel="stylesheet" href="../assets/css/site.css" />
+  </head>
+  <body data-page-slug="admin">
+    <div class="site-shell">
+      <header class="site-header">
+        <p class="eyebrow">Brain Lab Admin</p>
+        <h1 class="site-title">Manage site content</h1>
+        <p class="site-subtitle">
+          This panel uses Supabase Auth, Database, and Storage. Admin operations depend on RLS policies instead of
+          shipping server secrets to the browser.
+        </p>
+
+        <nav class="site-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../publications/">Publications</a></li>
+            <li><a href="../people/">People</a></li>
+            <li><a href="../resources/">Resources</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="site-main admin-shell">
+        <section class="admin-panel stack">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">Auth</p>
+              <h2 class="admin-title">Owner access</h2>
+            </div>
+            <button class="secondary" type="button" data-sign-out>Sign out</button>
+          </div>
+
+          <p class="status" data-auth-message data-state="loading">
+            Loading Supabase client and checking the current session...
+          </p>
+          <p class="muted" data-auth-session>No active session.</p>
+
+          <form class="stack" data-auth-form>
+            <div class="field-grid">
+              <div class="field">
+                <label for="auth-mode">Action</label>
+                <select id="auth-mode" data-auth-mode>
+                  <option value="signin">Sign in</option>
+                  <option value="signup">Create account</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="auth-email">Email</label>
+                <input id="auth-email" data-auth-email type="email" placeholder="owner@example.com" required />
+              </div>
+
+              <div class="field">
+                <label for="auth-password">Password</label>
+                <input id="auth-password" data-auth-password type="password" placeholder="Use a strong password" required />
+              </div>
+            </div>
+
+            <div class="action-row">
+              <button type="submit">Continue</button>
+              <p class="muted">Only allowlisted accounts should receive admin role.</p>
+            </div>
+          </form>
+        </section>
+
+        <div class="admin-columns">
+          <section class="admin-panel stack">
+            <div class="section-header">
+              <div>
+                <p class="eyebrow">Editor</p>
+                <h2 class="admin-title">Content and uploads</h2>
+              </div>
+              <button class="secondary" type="button" data-reset-editor>Reset form</button>
+            </div>
+
+            <p class="status" data-editor-message data-state="ready">
+              Sign in with an owner or editor account before editing content.
+            </p>
+
+            <form class="stack" data-editor-form>
+              <input data-field-id type="hidden" />
+
+              <div class="field-grid">
+                <div class="field">
+                  <label for="page-slug">Section</label>
+                  <select id="page-slug" data-field-page-slug>
+                    <option value="home">Home</option>
+                    <option value="publications">Publications</option>
+                    <option value="people">People</option>
+                    <option value="resources">Resources</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="block-key">Block key</label>
+                  <input id="block-key" data-field-block-key type="text" placeholder="hero-overview" />
+                </div>
+
+                <div class="field">
+                  <label for="entry-type">Entry type</label>
+                  <select id="entry-type" data-field-entry-type>
+                    <option value="note">Note</option>
+                    <option value="publication">Publication</option>
+                    <option value="profile">Profile</option>
+                    <option value="download">Download</option>
+                    <option value="link">Link</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="sort-order">Sort order</label>
+                  <input id="sort-order" data-field-sort-order type="number" value="0" />
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="entry-title">Title</label>
+                <input id="entry-title" data-field-title type="text" placeholder="Section title or entry title" />
+              </div>
+
+              <div class="field">
+                <label for="entry-body">Body</label>
+                <textarea id="entry-body" data-field-body placeholder="Texts, descriptions, or notes for this section"></textarea>
+              </div>
+
+              <div class="field-grid">
+                <div class="field">
+                  <label for="link-label">Link label</label>
+                  <input id="link-label" data-field-link-label type="text" placeholder="Read more" />
+                </div>
+
+                <div class="field">
+                  <label for="link-url">Link URL</label>
+                  <input id="link-url" data-field-link-url type="url" placeholder="https://example.org/resource" />
+                </div>
+              </div>
+
+              <div class="field-grid">
+                <div class="field">
+                  <label for="image-upload">Image</label>
+                  <input id="image-upload" data-field-image type="file" accept="image/*" />
+                </div>
+
+                <div class="field">
+                  <label for="file-upload">File</label>
+                  <input id="file-upload" data-field-file type="file" />
+                </div>
+              </div>
+
+              <label class="checkbox">
+                <input data-field-is-published type="checkbox" checked />
+                <span>Publish immediately</span>
+              </label>
+
+              <div class="action-row">
+                <button type="submit">Save entry</button>
+              </div>
+            </form>
+          </section>
+
+          <section class="admin-panel stack">
+            <div class="section-header">
+              <div>
+                <p class="eyebrow">Database</p>
+                <h2 class="admin-title">Existing entries</h2>
+              </div>
+              <button class="secondary" type="button" data-refresh-content>Refresh</button>
+            </div>
+
+            <div class="admin-entry-list" data-content-list>
+              <p class="muted">Loading entries...</p>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <p>
+          This site is powered by
+          <a href="https://netlify.com" rel="noopener noreferrer">Netlify</a>
+        </p>
+      </footer>
+    </div>
+
+    <script type="module" src="../assets/js/admin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Netlify local state
+.netlify/
+
+# Node tooling
+node_modules/
