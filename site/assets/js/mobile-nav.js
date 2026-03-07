@@ -27,9 +27,12 @@ if (topbar && siteNav) {
   mobileToggle.setAttribute("aria-controls", navId);
   mobileToggle.setAttribute("aria-label", "Open navigation menu");
   mobileToggle.innerHTML = `
-    <span class="mobile-nav-toggle-line"></span>
-    <span class="mobile-nav-toggle-line"></span>
-    <span class="mobile-nav-toggle-line"></span>
+    <svg class="mobile-nav-icon mobile-nav-icon--menu" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+      <path d="M2.5 5.5H17.5M2.5 10H17.5M2.5 14.5H17.5"></path>
+    </svg>
+    <svg class="mobile-nav-icon mobile-nav-icon--close" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+      <path d="M5 5L15 15M15 5L5 15"></path>
+    </svg>
   `;
 
   const listMarkup = mobileItems
