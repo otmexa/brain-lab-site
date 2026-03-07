@@ -1697,7 +1697,8 @@ html[data-theme="dark"] body[data-reading-mode="focused"][data-page-slug="public
     right: 0;
     z-index: 40;
     display: grid;
-    grid-template-columns: 2.35rem 1fr 2.35rem;
+    grid-template-columns: 2.35rem minmax(0, 1fr) 2.35rem;
+    grid-template-areas: "cta brand menu";
     align-items: center;
     gap: 0.35rem;
     width: 100%;
@@ -1718,8 +1719,10 @@ html[data-theme="dark"] body[data-reading-mode="focused"][data-page-slug="public
 
   body.has-mobile-nav .brand-lockup {
     display: inline-flex;
-    grid-column: 2;
+    grid-area: brand;
+    grid-row: 1;
     justify-self: center;
+    align-self: center;
     align-items: center;
     gap: 0.45rem;
     width: auto;
@@ -1750,8 +1753,13 @@ html[data-theme="dark"] body[data-reading-mode="focused"][data-page-slug="public
   }
 
   body.has-mobile-nav .nav-cta {
-    grid-column: 1;
+    grid-area: cta;
+    grid-row: 1;
     justify-self: start;
+    align-self: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     min-width: 2.25rem;
     width: 2.25rem;
     height: 2.25rem;
@@ -1772,8 +1780,10 @@ html[data-theme="dark"] body[data-reading-mode="focused"][data-page-slug="public
   }
 
   .mobile-nav-toggle {
-    grid-column: 3;
+    grid-area: menu;
+    grid-row: 1;
     justify-self: end;
+    align-self: center;
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -1849,6 +1859,8 @@ html[data-theme="dark"] body[data-reading-mode="focused"][data-page-slug="public
     right: 0;
     left: 0;
     bottom: 0;
+    height: 100dvh;
+    max-height: 100dvh;
     z-index: 1;
     display: grid;
     grid-template-rows: 1fr auto;
