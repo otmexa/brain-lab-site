@@ -21,18 +21,10 @@
           <nav class="site-nav" aria-label="Main navigation">
             <ul>
               <li><a href="./index.html" aria-current="page">Home</a></li>
+              <li><a href="./about/">About</a></li>
+              <li><a href="./research/">Research</a></li>
+              <li><a href="./methods/">Methods</a></li>
               <li><a href="./publications/">Publications</a></li>
-              <li class="nav-dropdown">
-                <details>
-                  <summary>People</summary>
-                  <div class="nav-dropdown-menu">
-                    <a href="./people/">Overview</a>
-                    <a href="./people/#team">Team Members</a>
-                    <a href="./people/#collaborators">Collaborators</a>
-                  </div>
-                </details>
-              </li>
-              <li><a href="./resources/">Resources</a></li>
             </ul>
           </nav>
 
@@ -46,32 +38,32 @@
           <div class="hero-grid hero-grid--home">
             <div class="hero-copy">
               <p class="eyebrow">Computational Neuroscience Lab</p>
-              <h1 class="site-title">Understanding memory, behavior, and neural computation.</h1>
+              <h1 class="site-title">Research on memory, behavior, and neural computation.</h1>
               <p class="site-subtitle">
-                A calm public front page for scientific papers, collaborators, and research materials, built to make
-                the lab easier to read and easier to navigate.
+                A clear public overview of the lab: the questions it studies, the technologies it uses, and the papers
+                that communicate the work.
               </p>
               <div class="action-row">
-                <a class="button" href="./publications/">View publications</a>
-                <a class="button secondary" href="./resources/">Explore resources</a>
+                <a class="button" href="./research/">Explore research</a>
+                <a class="button secondary" href="./publications/">View publications</a>
               </div>
               <p class="hero-support-text">
-                Visitors should understand the lab quickly: what it studies, who is involved, and where the papers and
-                supporting material live.
+                The home page should explain the big picture first, then guide visitors into detailed research themes,
+                methods, and article abstracts.
               </p>
             </div>
 
             <aside class="hero-feature-card">
               <div class="hero-feature-media" aria-hidden="true"></div>
               <div class="hero-feature-copy">
-                <p class="eyebrow">Publication Spotlight</p>
-                <h2 class="hero-feature-title">Example paper layout for hippocampal memory dynamics.</h2>
-                <p class="hero-feature-meta">Example Author One, Example Author Two / 2026</p>
+                <p class="eyebrow">Site Overview</p>
+                <h2 class="hero-feature-title">Five sections, one clean path through the lab's work.</h2>
+                <p class="hero-feature-meta">Home / About / Research / Methods / Publications</p>
                 <p class="muted">
-                  One strong publication card on the home page is enough to give the site scientific weight without
-                  burying the visitor in a long archive.
+                  About introduces J Jesus Hernandez Perez, Research explains the scientific questions, Methods covers
+                  the technology, and Publications keeps articles readable with abstracts and direct exits.
                 </p>
-                <a class="button secondary" href="./publications/">Open publication archive</a>
+                <a class="button secondary" href="./research/">Start with research</a>
               </div>
             </aside>
           </div>
@@ -82,43 +74,54 @@
         <section class="stack reveal" data-delay="2" aria-labelledby="home-example-title">
           <div class="section-header">
             <div>
-              <p class="eyebrow">Example Structure</p>
-              <h2 class="section-title" id="home-example-title">Three clear entry points</h2>
+              <p class="eyebrow">Global Overview</p>
+              <h2 class="section-title" id="home-example-title">What visitors should understand immediately</h2>
             </div>
           </div>
 
           <div class="content-grid">
             <article class="card content-card">
               <div class="meta-row">
+                <span class="pill">About</span>
+              </div>
+              <div class="stack">
+                <h3 class="card-title">Lead investigator</h3>
+                <p>Introduce J Jesus Hernandez Perez with a concise profile, focus areas, and the lab's scientific direction.</p>
+              </div>
+              <a class="button secondary" href="./about/">Open about</a>
+            </article>
+
+            <article class="card content-card">
+              <div class="meta-row">
+                <span class="pill">Research</span>
+              </div>
+              <div class="stack">
+                <h3 class="card-title">Scientific direction</h3>
+                <p>Introduce the main research questions and the broad scientific problems the lab is trying to answer.</p>
+              </div>
+              <a class="button secondary" href="./research/">Open research</a>
+            </article>
+
+            <article class="card content-card">
+              <div class="meta-row">
+                <span class="pill">Methods</span>
+              </div>
+              <div class="stack">
+                <h3 class="card-title">Technology and pipeline</h3>
+                <p>Show the experimental tools, recording systems, behavioral design, and computational analysis stack.</p>
+              </div>
+              <a class="button secondary" href="./methods/">Open methods</a>
+            </article>
+
+            <article class="card content-card">
+              <div class="meta-row">
                 <span class="pill">Publications</span>
               </div>
               <div class="stack">
-                <h3 class="card-title">Readable papers</h3>
-                <p>Feature the most relevant paper, then keep the archive simple with direct exits to DOI and PDF.</p>
+                <h3 class="card-title">Articles with abstracts</h3>
+                <p>Keep titles, abstracts, and direct exits to journal, DOI, or PDF easy to scan and easy to read.</p>
               </div>
               <a class="button secondary" href="./publications/">Open publications</a>
-            </article>
-
-            <article class="card content-card">
-              <div class="meta-row">
-                <span class="pill">People</span>
-              </div>
-              <div class="stack">
-                <h3 class="card-title">Clear profiles</h3>
-                <p>Separate the team from collaborators and keep each profile short, useful, and easy to scan.</p>
-              </div>
-              <a class="button secondary" href="./people/">Open people</a>
-            </article>
-
-            <article class="card content-card">
-              <div class="meta-row">
-                <span class="pill">Resources</span>
-              </div>
-              <div class="stack">
-                <h3 class="card-title">Useful materials</h3>
-                <p>Keep methods notes, files, datasets, and external links in a practical page that does not feel busy.</p>
-              </div>
-              <a class="button secondary" href="./resources/">Open resources</a>
             </article>
           </div>
         </section>

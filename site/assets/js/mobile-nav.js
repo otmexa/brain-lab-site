@@ -7,29 +7,10 @@ if (topbar && siteNav) {
 
   if (navList) {
     [...navList.children].forEach((item) => {
-      if (item.classList.contains("nav-dropdown")) {
-        const summary = item.querySelector("summary");
-        const links = [...item.querySelectorAll(".nav-dropdown-menu a")].map((link, index) => ({
-          label: link.textContent.trim(),
-          href: link.getAttribute("href") || "#",
-          current: item.classList.contains("is-current") && index === 0,
-        }));
-
-        mobileItems.push({
-          type: "group",
-          label: summary?.textContent?.trim() || "People",
-          current: item.classList.contains("is-current"),
-          links,
-        });
-
-        return;
-      }
-
       const link = item.querySelector(":scope > a");
 
       if (link) {
         mobileItems.push({
-          type: "link",
           label: link.textContent.trim(),
           href: link.getAttribute("href") || "#",
           current: link.getAttribute("aria-current") === "page",
@@ -53,35 +34,6 @@ if (topbar && siteNav) {
 
   const listMarkup = mobileItems
     .map((item) => {
-      if (item.type === "group") {
-        const sublinks = item.links
-          .map(
-            (link) => `
-              <a
-                class="mobile-nav-sublink${link.current ? " is-active" : ""}"
-                href="${link.href}"
-                ${link.current ? 'aria-current="page"' : ""}
-              >
-                <span>${link.label}</span>
-                <span class="mobile-nav-link-chevron" aria-hidden="true"></span>
-              </a>
-            `
-          )
-          .join("");
-
-        return `
-          <details class="mobile-nav-group${item.current ? " is-current" : ""}" ${item.current ? "open" : ""}>
-            <summary class="mobile-nav-group-summary">
-              <span>${item.label}</span>
-              <span class="mobile-nav-link-chevron" aria-hidden="true"></span>
-            </summary>
-            <div class="mobile-nav-sublinks">
-              ${sublinks}
-            </div>
-          </details>
-        `;
-      }
-
       return `
         <a
           class="mobile-nav-link${item.current ? " is-active" : ""}"
@@ -161,7 +113,7 @@ if (topbar && siteNav) {
 
   closeButton?.addEventListener("click", closeMenu);
 
-  mobileShell.querySelectorAll(".mobile-nav-link, .mobile-nav-sublink").forEach((link) => {
+  mobileShell.querySelectorAll(".mobile-nav-link").forEach((link) => {
     link.addEventListener("click", closeMenu);
   });
 

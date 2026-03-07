@@ -616,6 +616,7 @@ html[data-theme="dark"] .hero--home .button.secondary {
   color: #f4f7ff;
 }
 
+.hero--section,
 .hero--publications {
   width: 100%;
   padding: 3.4rem max(1.4rem, calc((100vw - var(--content-width)) / 2 + 1.4rem)) 3.2rem;
@@ -630,6 +631,7 @@ html[data-theme="dark"] .hero--home .button.secondary {
     linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(247, 250, 255, 0.92));
 }
 
+html[data-theme="dark"] .hero--section,
 html[data-theme="dark"] .hero--publications {
   border-color: rgba(80, 139, 255, 0.14);
   background:
@@ -638,6 +640,7 @@ html[data-theme="dark"] .hero--publications {
     linear-gradient(145deg, rgba(9, 18, 25, 0.92), rgba(13, 28, 38, 0.94));
 }
 
+.hero-grid--section,
 .hero-grid--publications {
   align-items: start;
 }
