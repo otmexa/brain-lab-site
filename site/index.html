@@ -13,8 +13,8 @@
           <a class="brand-lockup" href="./index.html" aria-label="Brain Lab home">
             <span class="brand-mark" aria-hidden="true"></span>
             <span class="brand-text">
-              <span class="eyebrow">Open Neuroscience Project</span>
-              <span class="brand-name">Brain Lab</span>
+              <span class="eyebrow">Computational Neuroscience Lab</span>
+              <span class="brand-name">Brain Science Lab</span>
             </span>
           </a>
 
@@ -22,40 +22,53 @@
             <ul>
               <li><a href="./index.html" aria-current="page">Home</a></li>
               <li><a href="./publications/">Publications</a></li>
-              <li><a href="./people/">People</a></li>
+              <li class="nav-dropdown">
+                <details>
+                  <summary>People</summary>
+                  <div class="nav-dropdown-menu">
+                    <a href="./people/">Overview</a>
+                    <a href="./people/#team">Team Members</a>
+                    <a href="./people/#collaborators">Collaborators</a>
+                  </div>
+                </details>
+              </li>
               <li><a href="./resources/">Resources</a></li>
             </ul>
           </nav>
+
+          <a class="button nav-cta" href="./publications/">View Publications</a>
         </div>
 
         <section class="hero hero--home reveal" data-delay="1">
           <div class="hero-grid hero-grid--home">
             <div class="hero-copy">
-              <p class="eyebrow">Main Page</p>
-              <h1 class="site-title">Neuroscience research, people, and open materials in one clear structure.</h1>
+              <p class="eyebrow">Computational Neuroscience Lab</p>
+              <h1 class="site-title">Understanding memory, behavior, and neural computation.</h1>
               <p class="site-subtitle">
-                This site is being organized as a readable public face for the lab: publications, collaborators, and
-                research resources without visual noise or confusing navigation.
+                A calm public front page for scientific papers, collaborators, and research materials, built to make
+                the lab easier to read and easier to navigate.
               </p>
               <div class="action-row">
                 <a class="button" href="./publications/">View publications</a>
-                <a class="button secondary" href="./people/">View people</a>
+                <a class="button secondary" href="./resources/">Explore resources</a>
               </div>
+              <p class="hero-support-text">
+                Visitors should understand the lab quickly: what it studies, who is involved, and where the papers and
+                supporting material live.
+              </p>
             </div>
 
-            <aside class="hero-visual" aria-hidden="true">
-              <div class="neuro-stage">
-                <span class="neuro-node node-a"></span>
-                <span class="neuro-node node-b"></span>
-                <span class="neuro-node node-c"></span>
-                <span class="neuro-node node-d"></span>
-                <span class="neuro-node node-e"></span>
-                <span class="neuro-link link-a"></span>
-                <span class="neuro-link link-b"></span>
-                <span class="neuro-link link-c"></span>
-                <span class="neuro-label label-a">memory</span>
-                <span class="neuro-label label-b">circuits</span>
-                <span class="neuro-label label-c">behavior</span>
+            <aside class="hero-feature-card">
+              <div class="hero-feature-media" aria-hidden="true"></div>
+              <div class="hero-feature-copy">
+                <p class="eyebrow">Publication Spotlight</p>
+                <h2 class="hero-feature-title">Example paper layout for hippocampal memory dynamics.</h2>
+                <p class="hero-feature-meta">Example Author One, Example Author Two / 2026</p>
+                <p class="muted">
+                  One strong publication card on the home page is enough to give the site scientific weight without
+                  burying the visitor in a long archive.
+                </p>
+                <a class="button secondary" href="./publications/">Open publication archive</a>
               </div>
             </aside>
           </div>
@@ -67,7 +80,7 @@
           <div class="section-header">
             <div>
               <p class="eyebrow">Example Structure</p>
-              <h2 class="section-title" id="home-example-title">What each section should do</h2>
+              <h2 class="section-title" id="home-example-title">Three clear entry points</h2>
             </div>
           </div>
 
@@ -78,8 +91,9 @@
               </div>
               <div class="stack">
                 <h3 class="card-title">Readable papers</h3>
-                <p>Featured papers first, then a clean archive with clear exits to DOI, journal page, or PDF.</p>
+                <p>Feature the most relevant paper, then keep the archive simple with direct exits to DOI and PDF.</p>
               </div>
+              <a class="button secondary" href="./publications/">Open publications</a>
             </article>
 
             <article class="card content-card">
@@ -88,8 +102,9 @@
               </div>
               <div class="stack">
                 <h3 class="card-title">Clear profiles</h3>
-                <p>Simple researcher cards with role, area of work, and enough context to know who is involved.</p>
+                <p>Separate the team from collaborators and keep each profile short, useful, and easy to scan.</p>
               </div>
+              <a class="button secondary" href="./people/">Open people</a>
             </article>
 
             <article class="card content-card">
@@ -98,31 +113,11 @@
               </div>
               <div class="stack">
                 <h3 class="card-title">Useful materials</h3>
-                <p>Files, links, datasets, and supporting documents presented in a structure that is easy to scan.</p>
+                <p>Keep methods notes, files, datasets, and external links in a practical page that does not feel busy.</p>
               </div>
+              <a class="button secondary" href="./resources/">Open resources</a>
             </article>
           </div>
-        </section>
-
-        <section class="split-grid reveal" data-delay="3">
-          <article class="card content-card feature-card">
-            <p class="eyebrow">Example Goal</p>
-            <h2 class="section-title">A site that is calm to read.</h2>
-            <ul class="signal-list signal-list--compact">
-              <li>Clear menu at the top on every page.</li>
-              <li>Less filler text and less decorative clutter.</li>
-              <li>Each page should show only the content type it is meant to hold.</li>
-            </ul>
-          </article>
-
-          <article class="card content-card feature-card">
-            <p class="eyebrow">Example Flow</p>
-            <h2 class="section-title">Home as orientation, not as a dump of everything.</h2>
-            <p class="muted">
-              The home page should explain what the lab publishes and guide visitors to the right section. It should
-              not try to contain every interface option or every type of content at once.
-            </p>
-          </article>
         </section>
       </main>
 

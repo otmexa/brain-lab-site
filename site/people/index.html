@@ -13,8 +13,8 @@
           <a class="brand-lockup" href="../index.html" aria-label="Brain Lab home">
             <span class="brand-mark" aria-hidden="true"></span>
             <span class="brand-text">
-              <span class="eyebrow">Open Neuroscience Project</span>
-              <span class="brand-name">Brain Lab</span>
+              <span class="eyebrow">Computational Neuroscience Lab</span>
+              <span class="brand-name">Brain Science Lab</span>
             </span>
           </a>
 
@@ -22,7 +22,16 @@
             <ul>
               <li><a href="../index.html">Home</a></li>
               <li><a href="../publications/">Publications</a></li>
-              <li><a href="./" aria-current="page">People</a></li>
+              <li class="nav-dropdown is-current">
+                <details>
+                  <summary>People</summary>
+                  <div class="nav-dropdown-menu">
+                    <a href="./">Overview</a>
+                    <a href="#team">Team Members</a>
+                    <a href="#collaborators">Collaborators</a>
+                  </div>
+                </details>
+              </li>
               <li><a href="../resources/">Resources</a></li>
             </ul>
           </nav>
@@ -37,11 +46,11 @@
       </header>
 
       <main class="site-main stack">
-        <section class="stack reveal" data-delay="2" aria-labelledby="people-example-title">
+        <section class="stack reveal" data-delay="2" aria-labelledby="people-example-title" id="team">
           <div class="section-header">
             <div>
-              <p class="eyebrow">Example Profiles</p>
-              <h2 class="section-title" id="people-example-title">Simple profile cards</h2>
+              <p class="eyebrow">Team Members</p>
+              <h2 class="section-title" id="people-example-title">Core lab profiles</h2>
             </div>
           </div>
 
@@ -68,11 +77,42 @@
 
             <article class="card content-card">
               <div class="meta-row">
-                <span class="pill">Collaborator</span>
+                <span class="pill">Graduate Researcher</span>
               </div>
               <div class="stack">
-                <h3 class="card-title">Example Collaborator</h3>
-                <p>Focus: data analysis, imaging, and cross-lab collaboration on experimental design.</p>
+                <h3 class="card-title">Example Researcher Three</h3>
+                <p>Focus: experimental design, neural data integration, and day-to-day support across active lab studies.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="stack reveal" data-delay="3" aria-labelledby="people-collaborators-title" id="collaborators">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">Collaborators</p>
+              <h2 class="section-title" id="people-collaborators-title">External research partners</h2>
+            </div>
+          </div>
+
+          <div class="content-grid">
+            <article class="card content-card">
+              <div class="meta-row">
+                <span class="pill">Imaging</span>
+              </div>
+              <div class="stack">
+                <h3 class="card-title">Example Imaging Collaborator</h3>
+                <p>Supports microscopy, image analysis, and interpretation of large neural recording pipelines.</p>
+              </div>
+            </article>
+
+            <article class="card content-card">
+              <div class="meta-row">
+                <span class="pill">Theory</span>
+              </div>
+              <div class="stack">
+                <h3 class="card-title">Example Theory Collaborator</h3>
+                <p>Contributes computational models and theoretical framing for circuit-level memory questions.</p>
               </div>
             </article>
           </div>
