@@ -61,6 +61,7 @@ body {
   margin: 0;
   min-height: 100vh;
   color: var(--text);
+  overflow-x: clip;
   background:
     radial-gradient(circle at top left, rgba(91, 136, 247, 0.18), transparent 28rem),
     radial-gradient(circle at top right, rgba(114, 197, 217, 0.16), transparent 22rem),
@@ -1494,6 +1495,20 @@ html[data-theme="dark"] body[data-reading-mode="focused"][data-page-slug="public
 }
 
 @media (min-width: 840px) {
+  .site-header {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding-left: clamp(1.4rem, 3vw, 2.6rem);
+    padding-right: clamp(1.4rem, 3vw, 2.6rem);
+  }
+
+  .site-header > .topbar,
+  .site-header > .hero {
+    width: 100%;
+    max-width: none;
+  }
+
   .hero-grid {
     grid-template-columns: 1.2fr 0.8fr;
     align-items: stretch;
