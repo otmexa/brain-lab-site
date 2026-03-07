@@ -114,7 +114,7 @@ if (topbar && siteNav) {
   `;
 
   topbar.prepend(mobileToggle);
-  topbar.after(mobileShell);
+  document.body.appendChild(mobileShell);
   document.body.classList.add("has-mobile-nav");
   document.body.dataset.mobileNav = "closed";
 
