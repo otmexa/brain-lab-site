@@ -1778,23 +1778,24 @@ html[data-theme="dark"] body[data-reading-mode="focused"][data-page-slug="public
 
   .mobile-nav-backdrop {
     position: fixed;
-    inset: var(--mobile-nav-offset, 4.1rem) 0 0 0;
+    inset: 0;
     border: 0;
-    background: rgba(237, 242, 248, 0.22);
-    backdrop-filter: blur(4px);
+    background: rgba(237, 242, 248, 0.08);
+    backdrop-filter: blur(2px);
   }
 
   .mobile-nav-panel {
     position: fixed;
-    top: var(--mobile-nav-offset, 4.1rem);
+    top: 0;
     right: 0;
     left: 0;
     bottom: 0;
     z-index: 1;
     display: grid;
     grid-template-rows: 1fr auto;
+    padding-top: var(--mobile-nav-offset, 4.1rem);
     overflow: hidden;
-    border-top: 1px solid rgba(91, 136, 247, 0.12);
+    border-top: 0;
     border-radius: 0;
     background: rgba(255, 255, 255, 0.985);
     box-shadow: none;
@@ -1924,11 +1925,10 @@ html[data-theme="dark"] body[data-reading-mode="focused"][data-page-slug="public
   }
 
   html[data-theme="dark"] .mobile-nav-backdrop {
-    background: rgba(7, 13, 24, 0.24);
+    background: rgba(7, 13, 24, 0.08);
   }
 
   html[data-theme="dark"] .mobile-nav-panel {
-    border-top-color: rgba(166, 194, 255, 0.1);
     background: rgba(11, 18, 32, 0.985);
     box-shadow: none;
   }
