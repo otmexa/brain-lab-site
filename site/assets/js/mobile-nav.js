@@ -123,7 +123,7 @@ if (topbar && siteNav) {
 
   const syncOffset = () => {
     const rect = topbar.getBoundingClientRect();
-    const offset = Math.max(Math.round(rect.bottom), 58);
+    const offset = Math.max(Math.round(rect.height), 52);
     document.documentElement.style.setProperty("--mobile-nav-offset", `${offset}px`);
   };
 
