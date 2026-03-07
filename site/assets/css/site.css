@@ -1792,8 +1792,10 @@ html[data-theme="dark"] body[data-reading-mode="focused"][data-page-slug="public
 
   .mobile-nav-icon {
     position: absolute;
-    width: 1.4rem;
-    height: 1.4rem;
+    inset: 0;
+    margin: auto;
+    width: 1.58rem;
+    height: 1.58rem;
     color: #20242c;
     transition:
       opacity 180ms ease,
